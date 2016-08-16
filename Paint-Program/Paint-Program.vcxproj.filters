@@ -36,6 +36,15 @@
     <ClInclude Include="Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FileStorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Drawing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Paint-Program.cpp">
@@ -48,6 +57,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ChildView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileStorage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Drawing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -63,6 +81,72 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\Paint-Program.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bitmap1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\red.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Black.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Brown.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\DarkBlue.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\DarkGreen.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\DarkGrey.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\DarkOrange.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\DarkPurple.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\DarkRed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\GreyBlue.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\LightBlue.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\LightGreen.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\LightGrey.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\LightOrange.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\LightPurple.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\MiddleBlue.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Peach.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bitmap2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Pink.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\White.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Yellow.bmp">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

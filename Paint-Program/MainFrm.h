@@ -4,6 +4,7 @@
 
 #pragma once
 #include "ChildView.h"
+#include "Controls.h"
 
 class CMainFrame : public CFrameWnd
 {
@@ -32,14 +33,21 @@ public:
 	virtual void Dump(CDumpContext& dc) const;
 #endif
 
+	//Class objects
 	CChildView    m_wndView;
+	CControls*    m_pControls;
+
 
 // Generated message map functions
 protected:
 	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 	afx_msg void OnSetFocus(CWnd *pOldWnd);
+	
 	DECLARE_MESSAGE_MAP()
-
+public:
+	afx_msg void OnFileSave();
+	afx_msg void OnFileLoad();
+	afx_msg void OnFileNew();
 };
 
 

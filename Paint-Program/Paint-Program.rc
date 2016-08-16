@@ -1,4 +1,4 @@
-//Microsoft Visual C++ generated resource script.
+// Microsoft Visual C++ generated resource script.
 //
 #include "resource.h"
 
@@ -16,44 +16,12 @@
 /////////////////////////////////////////////////////////////////////////////
 #undef APSTUDIO_READONLY_SYMBOLS
 
-#ifdef APSTUDIO_INVOKED
-
 /////////////////////////////////////////////////////////////////////////////
-//
-// TEXTINCLUDE
-//
+// English (United States) resources
 
-1 TEXTINCLUDE
-BEGIN
-    "resource.h\0"
-END
-
-2 TEXTINCLUDE
-BEGIN
-    "#ifndef APSTUDIO_INVOKED\r\n"
-    "#include ""targetver.h""\r\n"
-    "#endif\r\n"
-    "#include ""afxres.h""\r\n"
-    "#include ""verrsrc.h""\r\n"
-    "\0"
-END
-
-3 TEXTINCLUDE
-BEGIN
-    "#define _AFX_NO_OLE_RESOURCES\r\n"
-    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
-    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
-    "\r\n"
-    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
-    "LANGUAGE 9, 1\r\n"
-    "#include ""res\\PaintProgram.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
-    "#include ""afxres.rc""      // Standard components\r\n"
-    "#endif\r\n"
-    "\0"
-END
-
-#endif    // APSTUDIO_INVOKED
-
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -62,13 +30,8 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Paint-Program.ico"
 
-#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-LANGUAGE 9, 1
-IDR_MAINFRAME           ICON         "res\\Paint-Program.ico"
-#endif
-#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-LANGUAGE 9, 1
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -80,21 +43,15 @@ BEGIN
     POPUP "&File"
     BEGIN
         MENUITEM "E&xit",                       ID_APP_EXIT
-    END
-    POPUP "&Edit"
-    BEGIN
-        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
-        MENUITEM SEPARATOR
-        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
-        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
-        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "Save",                        ID_FILE_SAVE
+        MENUITEM "Load",                        ID_FILE_LOAD
+        MENUITEM "New",                         ID_FILE_NEW
     END
     POPUP "&Help"
     BEGIN
-        MENUITEM "&About Paint-Program...",          ID_APP_ABOUT
+        MENUITEM "&About Paint-Program...",     ID_APP_ABOUT
     END
 END
-
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -104,19 +61,17 @@ END
 
 IDR_MAINFRAME ACCELERATORS
 BEGIN
-    "C",            ID_EDIT_COPY,           VIRTKEY,CONTROL,NOINVERT
-    "V",            ID_EDIT_PASTE,          VIRTKEY,CONTROL,NOINVERT
-    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY,ALT,NOINVERT
-    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY,SHIFT,NOINVERT
-    VK_F6,          ID_NEXT_PANE,           VIRTKEY ,NOINVERT
-    VK_F6,          ID_PREV_PANE,           VIRTKEY,SHIFT,NOINVERT
-    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY,CONTROL,NOINVERT
-    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY,SHIFT,NOINVERT
-    "X",            ID_EDIT_CUT,            VIRTKEY,CONTROL,NOINVERT
-    "Z",            ID_EDIT_UNDO,           VIRTKEY,CONTROL,NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
 END
-
-
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -127,14 +82,14 @@ END
 IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "About Paint-Program"
-FONT 8, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
-    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,20,20
     LTEXT           "Paint-Program, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
-    LTEXT           "Copyright (C) 2016",IDC_STATIC,42,26,114,8
+    LTEXT           "Author: Matthew Lane",IDC_STATIC,42,24,114,8
     DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
+    LTEXT           "Copyright (C) 2016",IDC_STATIC,7,47,71,8
 END
-
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -142,18 +97,18 @@ END
 // Version
 //
 
-VS_VERSION_INFO     VERSIONINFO
-  FILEVERSION       1,0,0,1
-  PRODUCTVERSION    1,0,0,1
- FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
- FILEFLAGS VS_FF_DEBUG
+ FILEFLAGS 0x1L
 #else
  FILEFLAGS 0x0L
 #endif
- FILEOS VOS_NT_WINDOWS32
- FILETYPE VFT_APP
- FILESUBTYPE VFT2_UNKNOWN
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
 BEGIN
     BLOCK "StringFileInfo"
     BEGIN
@@ -161,19 +116,20 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "TODO: <Company name>"
             VALUE "FileDescription", "Paint-Program"
-            VALUE "FileVersion",     "1.0.0.1"
-            VALUE "InternalName",    "Paint-Program.exe"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "Paint-Program.exe"
             VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
-            VALUE "OriginalFilename","Paint-Program.exe"
+            VALUE "OriginalFilename", "Paint-Program.exe"
             VALUE "ProductName", "TODO: <Product name>"
-            VALUE "ProductVersion",  "1.0.0.1"
+            VALUE "ProductVersion", "1.0.0.1"
         END
     END
     BLOCK "VarFileInfo"
     BEGIN
-        VALUE "Translation", 0x0409, 1200
+        VALUE "Translation", 0x409, 1200
     END
 END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -193,6 +149,18 @@ BEGIN
 END
 #endif    // APSTUDIO_INVOKED
 
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
 /////////////////////////////////////////////////////////////////////////////
 //
 // String Table
@@ -200,14 +168,15 @@ END
 
 STRINGTABLE
 BEGIN
-// Non-mac-targeting apps remove the two extra substrings
     IDR_MAINFRAME           "Paint-Program"
 END
+
 STRINGTABLE
 BEGIN
     AFX_IDS_APP_TITLE       "Paint-Program"
     AFX_IDS_IDLEMESSAGE     "Ready"
 END
+
 STRINGTABLE
 BEGIN
     ID_INDICATOR_EXT        "EXT"
@@ -217,13 +186,26 @@ BEGIN
     ID_INDICATOR_OVR        "OVR"
     ID_INDICATOR_REC        "REC"
 END
+
 STRINGTABLE
 BEGIN
     ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
     ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
     ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
     ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
     ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
     ID_EDIT_CLEAR           "Erase the selection\nErase"
     ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
     ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
@@ -246,26 +228,196 @@ BEGIN
     AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
     AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
     AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
     AFX_IDS_SCRESTORE       "Restore the window to normal size"
     AFX_IDS_SCTASKLIST      "Activate Task List"
 END
 
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
 
-#endif
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Canada) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENC)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_CAN
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONTROLS DIALOGEX 0, 0, 113, 309
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "",IDC_COLOUR_RED,6,17,15,13,BS_BITMAP
+    PUSHBUTTON      "",IDC_COLOUR_DARK_GREEN,23,17,15,13,BS_BITMAP
+    PUSHBUTTON      "",IDC_COLOUR_LIGHT_GREEN,40,17,15,13,BS_BITMAP
+    PUSHBUTTON      "",IDC_COLOUR_LIGHT_BLUE,74,17,15,13,BS_BITMAP
+    PUSHBUTTON      "",IDC_COLOUR_DARK_PURPLE,91,17,15,13,BS_BITMAP
+    PUSHBUTTON      "",IDC_COLOUR_DARK_RED,6,30,15,13,BS_BITMAP
+    PUSHBUTTON      "",IDC_COLOUR_GREY_BLUE,23,30,15,13,BS_BITMAP
+    PUSHBUTTON      "",IDC_COLOUR_DARK_GREY,40,30,15,13,BS_BITMAP
+    PUSHBUTTON      "",IDC_COLOUR_DARK_ORANGE,74,30,15,13,BS_BITMAP
+    PUSHBUTTON      "",IDC_COLOUR_LIGHT_ORANGE,91,30,15,13,BS_BITMAP
+    PUSHBUTTON      "",IDC_COLOUR_LIGHT_GREY,57,30,15,13,BS_BITMAP
+    PUSHBUTTON      "",IDC_COLOUR_DARK_BLUE,57,17,15,13,BS_BITMAP
+    PUSHBUTTON      "",IDC_COLOUR_MIDDLE_BLUE,6,44,15,13,BS_BITMAP
+    PUSHBUTTON      "",IDC_COLOUR_PINK,23,44,15,13,BS_BITMAP
+    PUSHBUTTON      "",IDC_COLOUR_YELLOW,57,44,15,13,BS_BITMAP
+    PUSHBUTTON      "",IDC_COLOUR_WHITE,74,44,15,13,BS_BITMAP
+    PUSHBUTTON      "",IDC_COLOUR_BLACK,91,44,15,13,BS_BITMAP
+    PUSHBUTTON      "",IDC_COLOUR_LIGHT_PEACH,40,44,15,13,BS_BITMAP
+    GROUPBOX        "Colours",IDC_STATIC,3,7,103,72
+    GROUPBOX        "Line styles",IDC_STATIC,3,85,103,126
+    CONTROL         "",IDC_SLIDER_THICKNESS,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,7,111,87,15
+    LTEXT           "Line Thickness",IDC_STATIC,14,101,67,8
+    CONTROL         "Freehand",IDC_RADIO_FREEHAND,"Button",BS_AUTORADIOBUTTON | WS_GROUP,5,138,47,10
+    CONTROL         "Straight Horizontal",IDC_RADIO_HORIZONTAL,"Button",BS_AUTORADIOBUTTON,5,160,75,10
+    CONTROL         "Straight Vertical",IDC_RADIO_VERTICAL,"Button",BS_AUTORADIOBUTTON,5,185,67,10
+    PUSHBUTTON      "Eraser",IDC_BUTTON_ERASER,3,60,103,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_CONTROLS, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 106
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 302
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include ""verrsrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#include ""res\\PaintProgram.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""      // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_CONTROLS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_RED                 BITMAP                  "res\\red.bmp"
+
+IDB_BLACK               BITMAP                  "res\\Black.bmp"
+
+IDB_BROWN               BITMAP                  "res\\Brown.bmp"
+
+IDB_DARKBLUE            BITMAP                  "res\\DarkBlue.bmp"
+
+IDB_DARKGREEN           BITMAP                  "res\\DarkGreen.bmp"
+
+IDB_DARKGREY            BITMAP                  "res\\DarkGrey.bmp"
+
+IDB_DARKORANGE          BITMAP                  "res\\DarkOrange.bmp"
+
+IDB_DARKPURPLE          BITMAP                  "res\\DarkPurple.bmp"
+
+IDB_DARKRED             BITMAP                  "res\\DarkRed.bmp"
+
+IDB_GREYBLUE            BITMAP                  "res\\GreyBlue.bmp"
+
+IDB_LIGHTBLUE           BITMAP                  "res\\LightBlue.bmp"
+
+IDB_LIGHTGREEN          BITMAP                  "res\\LightGreen.bmp"
+
+IDB_LIGHTGREY           BITMAP                  "res\\LightGrey.bmp"
+
+IDB_LIGHTORANGE         BITMAP                  "res\\LightOrange.bmp"
+
+IDB_LIGHTPURPLE         BITMAP                  "res\\LightPurple.bmp"
+
+IDB_MIDDLEBLUE          BITMAP                  "res\\MiddleBlue.bmp"
+
+IDB_PEACH               BITMAP                  "res\\Peach.bmp"
+
+IDB_PINK                BITMAP                  "res\\Pink.bmp"
+
+IDB_WHITE               BITMAP                  "res\\White.bmp"
+
+IDB_YELLOW              BITMAP                  "res\\Yellow.bmp"
+
+#endif    // English (Canada) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
 
 #ifndef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
 //
 // Generated from the TEXTINCLUDE 3 resource.
 //
-
 #define _AFX_NO_OLE_RESOURCES
 #define _AFX_NO_TRACKER_RESOURCES
 #define _AFX_NO_PROPERTY_RESOURCES
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 LANGUAGE 9, 1
-#include "res\\PaintProgram.rc2"  // non-Microsoft Visual C++ edited resources
+#include "res\PaintProgram.rc2"  // non-Microsoft Visual C++ edited resources
 #include "afxres.rc"      // Standard components
 #endif
+
+/////////////////////////////////////////////////////////////////////////////
 #endif    // not APSTUDIO_INVOKED
+
