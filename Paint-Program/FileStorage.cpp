@@ -4,11 +4,6 @@
 /*
 	@class CFileStorage.cpp
 	@purpose This class is used for saving and loading image files. 
-
-I am not the sole author of this code. The function SaveFile as well as it's reliant GetFile Pointer were modified by myself for my needs, but the core of the code
-was taken from http://www.cplusplus.com/forum/beginner/25138/, its original location is unknown, as the author there said it was a snippet they found. 
-
-However, I did write everything else in this program
 */
 
 #include "stdafx.h"
